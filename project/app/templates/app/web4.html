@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Popola web</title>
+  </head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ <style media="screen">
+   p {text-align: center;}
+   .heading {background-color: white;
+             text-align: center;
+            color: black;
+            padding: 100px 100px 100px 100px;}
+    .first-link {color: white;
+                background-color: #0099ff;
+                padding: 10px 10px 10px 10px;
+                border-radius: 8px;}
+    .link {text-align: center;}
+    main {padding: 100px 100px 200px 100px;
+          background-color: black;}
+
+ </style>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/login" tabindex="-1" aria-disabled="true">Login</a>
+        </li>
+        {% if login %}
+        <li class="nav-item">
+          <a class="nav-link" href="#">Logout</a>
+        </li>
+        {% endif %}
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <div class="alert alert-success">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <p>Sucess</p>
+    <p>You are successfully log in</p>
+  </div>
+  <main>
+  <div class="heading">
+    <h1>Thank you for registering {{ UserName }}</h1>
+    <h2>You can now check out some of the exciting features of our Website</h2>
+    <h3>You can Check out the latest exchange Currency</h3><br>
+  <div class="link">
+    <a href="{% url 'web5' %}"><span class="first-link">Click Here</span></a>
+  </div>
+</div><br><br><br>
+  <div class="heading">
+    <h2>Try Out our new chatting WebApp</h2><br>
+    <div class="link">
+    <a href="/mute"><span class="first-link">Click Here</span></a>
+  </div>
+</div><br><br><br><br><br><br><br><br>
+  <div class="heading">
+    <h2>You can also try our note taking app</h2><br>
+    <div class="link">
+    <a href="{% url 'web7' %}"><span class="first-link">Click Here</span></a>
+  </div>
+
+  </div>
+</main>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Popola web</title>
+  </head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ <script>
+   document.addEventListener('DOMContentLoaded', () => {
+     document.querySelector('#form').onsubmit = () => {
+       console.log("form submitted")
+       const request = new XMLHttpRequest;
+       const currency = document.querySelector('#currency').value;
+       request.open('POST', '/currency')
+       console.log("form opened")
+       request.onload = () => {
+         const data = JSON.parse(request.responseText);
+         if (data.success) {
+           console.log("request recieved")
+           const content = `1 EUR is equal to ${data.rate} ${currency}`
+           document.querySelector('#return').innerHTML = content;
+         }
+         else {document.querySelector('#return').innerHTML = 'There was an error'}
+         }
+         const data = new FormData()
+         data.append('currency', currency)
+         request.send(data)
+         return false}
+
+   })
+
+ </script>
+ <style>
+   p {text-align: center;}
+   .h1 {text-align: center;}
+   .heading {text-align: center;}
+   .first-link {color: white;
+               background-color: #0099ff;
+               padding: 10px 10px 10px 10px;
+               border-radius: 8px;}
+ </style>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/login" tabindex="-1" aria-disabled="true">Login</a>
+        </li>
+        {% if login %}
+        <li class="nav-item">
+          <a class="nav-link" href="#">Logout</a>
+        </li>
+        {% endif %}
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <main>
+    <div class="heading">
+    <form id="form">
+      <h1 class="h1">Welcome to our Currency converter</h1>
+      <h2>Please note that our base currency is in euro</h2>
+      <input type="text" name="currency" id="currency" placeholder="Please input cyrrency to convert">
+      <input type="submit" value="submit" class="first-link">
+      <hr><div id="return">
+      </div>
+      </div>
+    </form>
+      </main>
+  </body>
+</html>

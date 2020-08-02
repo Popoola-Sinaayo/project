@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Popoola Sinaayo">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Webpage LAyout">
+    <title>Popoola's Homepage</title>
+  </head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  #nav {position: fixed;
+      top: 0;
+      width: 100%;
+      display: inline;}
+@keyframes move {
+  from {background-image: url("/static/app/first.jpg");
+       background-size: auto;
+       background-repeat: no-repeat;
+       padding: 100px 100px 200px 100px;}
+  to {background-image: url("/static/app/second.jpg");
+       background-size: auto;
+       background-repeat: no-repeat;
+       padding: 100px 100px 200px 100px;}
+}
+main {animation-name: move;
+     animation-duration: 0.1s;
+     animation-iteration-count: infinite;
+     align-items: center;
+     animation-delay: 1s;
+     animation-direction: normal;
+     animation-fill-mode: forwards;}
+.fa {
+  padding: 10px 10px 10px 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 25px;
+  margin: 50px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+h1 {text-align: center;
+  color: Green}
+.Sub-footer {text-align: center;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 50px 0px 50px;}
+.SUBFOOTER {padding: 0px 500px 0px 500px;
+           text-align: center;
+         }
+footer {background-color: black;
+       padding: 10px 10px 100px 10px;}
+.div1 {text-align: center;}
+input {width: 60%;}
+.span2 {background-color: #0099ff;
+       color: white;
+      border: 50px 50px 50px 50px;
+      border-radius: 5px;}
+.submit {background-color: #0099ff;
+padding: 20px 60px 20px 60px;
+border-radius: 20px;
+text-decoration: none;
+color: black;  }
+.submit:hover {background-color: black;
+              color: white;
+              text-decoration: none;
+              padding: 20px 60px 20px 60px;
+             border-radius: 20px;}
+.paragraph {color: red;
+   text-align: center;}
+.h6 {text-align: center;
+    color: green;}
+@keyframes identifier {
+from {
+  background-color: #0099ff;
+  padding: 20px 60px 20px 60px;
+ border-radius: 20px;
+ text-decoration: none;
+ color: black;
+font-size: 15px;
+}
+to {
+  background-color: #0099ff;
+  padding: 40px 80px 40px 80px;
+ border-radius: 20px;
+ text-decoration: none;
+ color: black;
+ font-size: 20px;
+}
+}
+@media (max-width: 1500px) {
+  .SUBFOOTER {text-align: center;
+             padding: 0px 0px 0px 0px;
+             margin: 0px 0px 0px 0px;}
+  body {font-size: 20px;}
+
+}
+@media (max-width: 465px) {
+  .submit {background-color: #0099ff;
+          padding:5px 10px 5px 10px;
+         border-radius: 0;
+        text-decoration: none;
+        color: black;}
+      }
+@media (max-width: 361px) {
+  .submit {background-color: #0099ff;
+          padding: 2px 5px 2px 5px;
+         border-radius: 2px;
+        text-decoration: none;
+        color: black;
+        font-size: 10px;}
+  h1 {font-size: 15px;}
+  .h6 {font-size: 10px;}
+}
+@media (max-width: 370) {
+  .SUBFOOTER {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: inline;
+
+  }
+}
+</style>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', () => {
+    
+  })
+</script>
+<body>
+  <div id="nav">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand">DesignPro</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Advertise</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</div>
+<main class="main">
+  <h1>Welcome To DesignPro</h1>
+  <h6 class="h6">Innovation Starts here</h6>
+  <hr>
+  <br><br><br><br><br><br><br><br><br>
+  <div class="div1">
+  <a href="{% url 'web1' %}"><span class="submit">Get Started -></span></a>
+  </div>
+</main>
+<footer id="footer">
+  <div class="Sub-footer">
+<a href="#">About</a><br>
+<a href="#">Services</a><br>
+<a href="#">Advertise</a><br>
+<a href="#">Social</a><br>
+<a href="#">Meet Us</a><br>
+<a href="#">Terms and Condition</a><br>
+</div>
+<div class="SUBFOOTER">
+<a href="#" class="fa fa-facebook" class="icons"></a>
+<a href="#" class="fa fa-twitter" class="icons"></a>
+<a href="#" class="fa fa-google" class="icons"></a>
+<a href="#" class="fa fa-linkedin" class="icons"></a>
+<a href="#" class="fa fa-youtube" class="icons"></a>
+<a href="#" class="fa fa-instagram" class="icons"></a>
+</div>
+</footer>
+</body>
+</html>

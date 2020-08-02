@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link href="static/app/styles.css" rel="stylesheet" type="text/css" />
+		<title>DesignPro Login</title>
+
+	</head>
+
+	<body>
+		<div
+		class="header">
+		<div class="navigation_wrapper">
+			<div class="logo">DesignPro</div>
+				<div class="navigation">
+					<a href="#">Home</a>
+					<a href="#">About</a>
+					<a href="#">Events</a>
+					<a href="#">Sign Up</a>
+				</div>
+			</div>
+		</div>
+		<div class="page_wrapper">
+			<!--Login section-->
+			<div class="table_cell half">
+				<div class="content">
+					<!--LOGIN-->
+
+					<form class="" action="index.html" method="post">
+						<h1>Login</h1>
+						<input type="text" name="" placeholder="UserName"><br>
+						<input type="password" name="" placeholder="Password"> <br><br><br>
+						<input type="submit" placeholder="Password" value="Submit" class="submit">
+					</form>
+				</div>
+			</div>
+		</div>
+		<script>
+		//Hack to fix hover on element with inline color set on child element for facebook and email buttons
+		var fb_button = document.getElementById("facebook_button_initial");
+		var fb_text = document.getElementById("fbchkintxt");
+		var email_button = document.getElementById("email_button_initial");
+		var email_text = document.getElementById("emchkintxt");
+
+		if(fb_button){
+			fb_button.onmouseover = function(){
+				fb_text.style.color = "#fff";
+
+			};
+			fb_button.onmouseout = function(){
+				fb_text.style.color = "#000)";
+
+			};
+		}
+
+		if(email_button){
+			email_button.onmouseover = function(){
+				email_text.style.color = "#000)";
+
+			};
+			email_button.onmouseout = function(){
+				email_text.style.color = "#fff";
+
+			};
+		}
+		</script>
+	</body>
+</html>
