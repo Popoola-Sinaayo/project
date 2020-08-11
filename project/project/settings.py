@@ -41,15 +41,25 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+'''
 EMAIL_ACTIVE_FIELD = 'is_active'
 EMAIL_SERVER = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_ADDRESS = 'Olusegunpopoola4real@gmail.com'
 EMAIL_PASSWORD = 'prayer1020'
-EMAIL_MAIL_HTML = 'mail.html'
+EMAIL_MAIL_HTML = 'app/homepage.html'
 EMAIL_MAIL_SUBJECT = 'Confirm your email'
-EMAIL_PAGE_TEMPLATE = 'confirm_template.html'
+EMAIL_PAGE_TEMPLATE = 'app/homepage.html'
 EMAIL_PAGE_DOMAIN = 'https://127.0.0:8000/index.html'
+'''
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'olusegunpopoola4real@gmail.com'
+EMAIL_HOST_PASSWORD = 'prayer1020'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
